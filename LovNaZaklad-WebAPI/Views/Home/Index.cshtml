@@ -1,0 +1,9 @@
+﻿@model LovNaZaklad_WebAPI.Models.User
+
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>Hello, @User.Identity.Name</h1>
+}
+else
+{
+}

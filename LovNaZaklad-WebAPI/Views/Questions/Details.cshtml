@@ -1,0 +1,50 @@
+﻿@model LovNaZaklad_WebAPI.Models.Question
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Name)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.NextLocation.Name, "Next Location")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NextLocation.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuestionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
